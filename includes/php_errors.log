@@ -1,0 +1,638 @@
+[04-Jul-2025 16:51:24 Europe/Berlin] Starting order processing with data:
+[04-Jul-2025 16:51:24 Europe/Berlin] Customer ID: 1
+[04-Jul-2025 16:51:24 Europe/Berlin] POST Data: Array
+(
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [phone] => 0723347019
+    [address] => Pipeline
+    [city] => Nairobi
+    [delivery_method_id] => 2
+    [delivery_zone_id] => 2
+    [notes] => 
+    [payment_method] => mpesa
+)
+
+[04-Jul-2025 16:51:24 Europe/Berlin] Cart Totals: Array
+(
+    [subtotal] => 18000
+    [delivery_fee] => 0
+    [total_amount] => 18000
+    [total_items] => 1
+)
+
+[04-Jul-2025 16:51:24 Europe/Berlin] PDO Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delivery_method_id' in 'field list'
+[04-Jul-2025 16:51:24 Europe/Berlin] SQL State: 42S22
+[04-Jul-2025 16:51:24 Europe/Berlin] Driver Error: Unknown column 'delivery_method_id' in 'field list'
+[04-Jul-2025 16:51:24 Europe/Berlin] Order creation result: 
+[04-Jul-2025 16:51:24 Europe/Berlin] [ERR-6867ea6ccea78] Checkout Error: Order creation returned false
+[04-Jul-2025 16:51:24 Europe/Berlin] [ERR-6867ea6ccea78] POST Data: Array
+(
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [phone] => 0723347019
+    [address] => Pipeline
+    [city] => Nairobi
+    [delivery_method_id] => 2
+    [delivery_zone_id] => 2
+    [notes] => 
+    [payment_method] => mpesa
+)
+
+[04-Jul-2025 16:51:24 Europe/Berlin] [ERR-6867ea6ccea78] Session Data: Array
+(
+    [admin_id] => 1
+    [username] => kibet
+    [admin_name] => 
+    [admin_role] => editor
+    [LAST_ACTIVITY] => 1751634053
+    [IP_ADDRESS] => 127.0.0.1
+    [USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+    [redirect_url] => checkout.php
+    [customer_id] => 1
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [logged_in] => 1
+    [cart] => Array
+        (
+            [6] => Array
+                (
+                    [id] => 6
+                    [name] => Test
+                    [price] => 20000.00
+                    [discount] => 10.00
+                    [image] => 686026a867877.jpeg
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+[04-Jul-2025 16:51:38 Europe/Berlin] Starting order processing with data:
+[04-Jul-2025 16:51:38 Europe/Berlin] Customer ID: 1
+[04-Jul-2025 16:51:38 Europe/Berlin] POST Data: Array
+(
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [phone] => 0723347019
+    [address] => Pipeline
+    [city] => Nairobi
+    [delivery_method_id] => 2
+    [delivery_zone_id] => 2
+    [notes] => 
+    [payment_method] => mpesa
+)
+
+[04-Jul-2025 16:51:38 Europe/Berlin] Cart Totals: Array
+(
+    [subtotal] => 18000
+    [delivery_fee] => 0
+    [total_amount] => 18000
+    [total_items] => 1
+)
+
+[04-Jul-2025 16:51:38 Europe/Berlin] PDO Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delivery_method_id' in 'field list'
+[04-Jul-2025 16:51:38 Europe/Berlin] SQL State: 42S22
+[04-Jul-2025 16:51:38 Europe/Berlin] Driver Error: Unknown column 'delivery_method_id' in 'field list'
+[04-Jul-2025 16:51:38 Europe/Berlin] Order creation result: 
+[04-Jul-2025 16:51:38 Europe/Berlin] [ERR-6867ea7ab729a] Checkout Error: Order creation returned false
+[04-Jul-2025 16:51:38 Europe/Berlin] [ERR-6867ea7ab729a] POST Data: Array
+(
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [phone] => 0723347019
+    [address] => Pipeline
+    [city] => Nairobi
+    [delivery_method_id] => 2
+    [delivery_zone_id] => 2
+    [notes] => 
+    [payment_method] => mpesa
+)
+
+[04-Jul-2025 16:51:38 Europe/Berlin] [ERR-6867ea7ab729a] Session Data: Array
+(
+    [admin_id] => 1
+    [username] => kibet
+    [admin_name] => 
+    [admin_role] => editor
+    [LAST_ACTIVITY] => 1751634053
+    [IP_ADDRESS] => 127.0.0.1
+    [USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+    [redirect_url] => checkout.php
+    [customer_id] => 1
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [logged_in] => 1
+    [cart] => Array
+        (
+            [6] => Array
+                (
+                    [id] => 6
+                    [name] => Test
+                    [price] => 20000.00
+                    [discount] => 10.00
+                    [image] => 686026a867877.jpeg
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+[04-Jul-2025 16:52:57 Europe/Berlin] Starting order processing with data:
+[04-Jul-2025 16:52:57 Europe/Berlin] Customer ID: 1
+[04-Jul-2025 16:52:57 Europe/Berlin] POST Data: Array
+(
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [phone] => 0723347019
+    [address] => Pipeline
+    [city] => Nairobi
+    [delivery_method_id] => 2
+    [delivery_zone_id] => 2
+    [notes] => 
+    [payment_method] => mpesa
+)
+
+[04-Jul-2025 16:52:57 Europe/Berlin] Cart Totals: Array
+(
+    [subtotal] => 18000
+    [delivery_fee] => 0
+    [total_amount] => 18000
+    [total_items] => 1
+)
+
+[04-Jul-2025 16:52:57 Europe/Berlin] Order creation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delivery_method_id' in 'field list'
+[04-Jul-2025 16:52:57 Europe/Berlin] Order creation result: 
+[04-Jul-2025 16:52:57 Europe/Berlin] [ERR-6867eac93a75c] Checkout Error: Order creation returned false
+[04-Jul-2025 16:52:57 Europe/Berlin] [ERR-6867eac93a75c] POST Data: Array
+(
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [phone] => 0723347019
+    [address] => Pipeline
+    [city] => Nairobi
+    [delivery_method_id] => 2
+    [delivery_zone_id] => 2
+    [notes] => 
+    [payment_method] => mpesa
+)
+
+[04-Jul-2025 16:52:57 Europe/Berlin] [ERR-6867eac93a75c] Session Data: Array
+(
+    [admin_id] => 1
+    [username] => kibet
+    [admin_name] => 
+    [admin_role] => editor
+    [LAST_ACTIVITY] => 1751634053
+    [IP_ADDRESS] => 127.0.0.1
+    [USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+    [redirect_url] => checkout.php
+    [customer_id] => 1
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [logged_in] => 1
+    [cart] => Array
+        (
+            [6] => Array
+                (
+                    [id] => 6
+                    [name] => Test
+                    [price] => 20000.00
+                    [discount] => 10.00
+                    [image] => 686026a867877.jpeg
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+[04-Jul-2025 16:53:00 Europe/Berlin] Starting order processing with data:
+[04-Jul-2025 16:53:00 Europe/Berlin] Customer ID: 1
+[04-Jul-2025 16:53:00 Europe/Berlin] POST Data: Array
+(
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [phone] => 0723347019
+    [address] => Pipeline
+    [city] => Nairobi
+    [delivery_method_id] => 2
+    [delivery_zone_id] => 2
+    [notes] => 
+    [payment_method] => mpesa
+)
+
+[04-Jul-2025 16:53:00 Europe/Berlin] Cart Totals: Array
+(
+    [subtotal] => 18000
+    [delivery_fee] => 0
+    [total_amount] => 18000
+    [total_items] => 1
+)
+
+[04-Jul-2025 16:53:00 Europe/Berlin] Order creation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'delivery_method_id' in 'field list'
+[04-Jul-2025 16:53:00 Europe/Berlin] Order creation result: 
+[04-Jul-2025 16:53:00 Europe/Berlin] [ERR-6867eaccd4414] Checkout Error: Order creation returned false
+[04-Jul-2025 16:53:00 Europe/Berlin] [ERR-6867eaccd4414] POST Data: Array
+(
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [phone] => 0723347019
+    [address] => Pipeline
+    [city] => Nairobi
+    [delivery_method_id] => 2
+    [delivery_zone_id] => 2
+    [notes] => 
+    [payment_method] => mpesa
+)
+
+[04-Jul-2025 16:53:00 Europe/Berlin] [ERR-6867eaccd4414] Session Data: Array
+(
+    [admin_id] => 1
+    [username] => kibet
+    [admin_name] => 
+    [admin_role] => editor
+    [LAST_ACTIVITY] => 1751634053
+    [IP_ADDRESS] => 127.0.0.1
+    [USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+    [redirect_url] => checkout.php
+    [customer_id] => 1
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [logged_in] => 1
+    [cart] => Array
+        (
+            [6] => Array
+                (
+                    [id] => 6
+                    [name] => Test
+                    [price] => 20000.00
+                    [discount] => 10.00
+                    [image] => 686026a867877.jpeg
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+[04-Jul-2025 17:03:42 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\sunstore-industries\customer_login.php on line 16
+[04-Jul-2025 17:03:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\sunstore-industries\customer_login.php:16
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\customer_login.php on line 16
+[04-Jul-2025 17:07:57 Europe/Berlin] Login error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'field list'
+[04-Jul-2025 17:08:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::bind_param() in C:\xampp\htdocs\sunstore-industries\customer_login.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\customer_login.php on line 17
+[04-Jul-2025 17:11:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1265
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\cart.php(70): get_product_by_id(12)
+#1 C:\xampp\htdocs\sunstore-industries\cart.php(37): add_to_cart(12, 1)
+#2 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1265
+[04-Jul-2025 17:17:29 Europe/Berlin] PHP Fatal error:  Cannot redeclare add_to_cart() (previously declared in C:\xampp\htdocs\sunstore-industries\cart.php:51) in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1296
+[04-Jul-2025 17:18:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function calculate_cart_totals() in C:\xampp\htdocs\sunstore-industries\cart.php:93
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\cart.php on line 93
+[04-Jul-2025 17:21:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function calculate_cart_totals() in C:\xampp\htdocs\sunstore-industries\cart.php:93
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\cart.php on line 93
+[04-Jul-2025 17:27:32 Europe/Berlin] PHP Warning:  Undefined variable $delivery_method_id in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1416
+[04-Jul-2025 17:27:32 Europe/Berlin] PHP Warning:  Undefined variable $delivery_method_id in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1419
+[04-Jul-2025 17:27:32 Europe/Berlin] PHP Warning:  Undefined variable $delivery_method_id in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1422
+[04-Jul-2025 17:30:33 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:30:39 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:30:46 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:35:44 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:35:45 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:35:47 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:35:54 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:46:30 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:46:30 Europe/Berlin] PHP Warning:  Undefined array key "total_discount" in C:\xampp\htdocs\sunstore-industries\cart.php on line 172
+[04-Jul-2025 17:46:30 Europe/Berlin] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\xampp\htdocs\sunstore-industries\cart.php on line 172
+[04-Jul-2025 17:50:30 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:50:35 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:51:05 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:52:09 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\sunstore-industries\includes\header.php:100) in C:\xampp\htdocs\sunstore-industries\product.php on line 58
+[04-Jul-2025 17:55:56 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:56:12 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:56:20 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:56:20 Europe/Berlin] PHP Warning:  Undefined array key "email" in C:\xampp\htdocs\sunstore-industries\checkout.php on line 75
+[04-Jul-2025 17:56:49 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 17:56:49 Europe/Berlin] Starting order processing:
+[04-Jul-2025 17:56:49 Europe/Berlin] Customer ID: 1
+[04-Jul-2025 17:56:49 Europe/Berlin] POST Data: Array
+(
+    [first_name] => kibet
+    [last_name] => rotich
+    [email] => ernest@gmail.com
+    [phone] => 0723347019
+    [address] => Niarobi
+    [city] => Nairobi
+    [delivery_method_id] => 2
+    [delivery_zone_id] => 10
+    [notes] => 
+    [payment_method] => mpesa
+)
+
+[04-Jul-2025 17:56:49 Europe/Berlin] Cart Totals: Array
+(
+    [subtotal] => 28000
+    [delivery_fee] => 200
+    [total_amount] => 28200
+    [delivery_method_id] => 1
+)
+
+[04-Jul-2025 17:56:49 Europe/Berlin] [ERR-6867f9c1341c7] Checkout Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'field list'
+[04-Jul-2025 18:05:12 Europe/Berlin] PHP Fatal error:  Cannot redeclare create_order() (previously declared in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1274) in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1577
+[04-Jul-2025 18:06:04 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:06:57 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:06:57 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:06:57 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function create_order(), 1 passed in C:\xampp\htdocs\sunstore-industries\checkout.php on line 64 and exactly 13 expected in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1274
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(64): create_order(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1274
+[04-Jul-2025 18:11:42 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:11:42 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:11:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function beginTransaction() on null in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1278
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(64): create_order(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1278
+[04-Jul-2025 18:20:20 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:20:20 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:20:20 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:26:27 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:27:20 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:27:20 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:27:20 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:30:00 Europe/Berlin] PHP Fatal error:  Cannot redeclare create_order() (previously declared in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1274) in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1554
+[04-Jul-2025 18:30:29 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:31:14 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:31:14 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:31:14 Europe/Berlin] Delivery fee calculation error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[04-Jul-2025 18:35:28 Europe/Berlin] PHP Fatal error:  Cannot redeclare create_order() (previously declared in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1274) in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1554
+[04-Jul-2025 18:35:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1417
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(89): calculate_cart_totals()
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1417
+[04-Jul-2025 18:36:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1417
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(89): calculate_cart_totals()
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1417
+[04-Jul-2025 18:42:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1417
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(89): calculate_cart_totals()
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1417
+[04-Jul-2025 18:49:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1417
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(89): calculate_cart_totals()
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1417
+[05-Jul-2025 10:46:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1417
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(89): calculate_cart_totals()
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1417
+[05-Jul-2025 12:58:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1417
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(89): calculate_cart_totals()
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1417
+[05-Jul-2025 13:10:13 Europe/Berlin] PHP Warning:  Undefined variable $pdo in C:\xampp\htdocs\sunstore-industries\checkout.php on line 89
+[05-Jul-2025 13:10:13 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: calculate_cart_totals(): Argument #1 ($pdo) must be of type PDO, null given, called in C:\xampp\htdocs\sunstore-industries\checkout.php on line 89 and defined in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1397
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(89): calculate_cart_totals(NULL)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1397
+[05-Jul-2025 13:16:03 Europe/Berlin] PHP Warning:  Undefined variable $pdo in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1415
+[05-Jul-2025 13:16:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1415
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\checkout.php(89): calculate_cart_totals(Object(PDO))
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1415
+[05-Jul-2025 13:49:48 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "{" in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1484
+[05-Jul-2025 13:50:14 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 13:50:41 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 13:50:51 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 13:50:54 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 13:50:57 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 13:51:00 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 13:51:28 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 13:58:14 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 13:58:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function process_payment() in C:\xampp\htdocs\sunstore-industries\checkout.php:25
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\checkout.php on line 25
+[05-Jul-2025 14:06:15 Europe/Berlin] PHP Fatal error:  Cannot redeclare process_mpesa_payment() (previously declared in C:\xampp\htdocs\sunstore-industries\includes\functions.php:1584) in C:\xampp\htdocs\sunstore-industries\includes\functions.php on line 1678
+[05-Jul-2025 14:07:27 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 14:07:27 Europe/Berlin] Order Error: Database connection not established
+[05-Jul-2025 14:08:11 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 14:08:11 Europe/Berlin] Order Error: Database connection not established
+[05-Jul-2025 14:10:20 Europe/Berlin] PHP Warning:  Undefined variable $order_totals in C:\xampp\htdocs\sunstore-industries\checkout.php on line 20
+[05-Jul-2025 14:10:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\sunstore-industries\checkout.php on line 20
+[05-Jul-2025 14:10:20 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 14:10:20 Europe/Berlin] Order Error: Database connection not established
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Warning:  Undefined variable $order_totals in C:\xampp\htdocs\sunstore-industries\checkout.php on line 20
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\sunstore-industries\checkout.php on line 20
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Warning:  Undefined variable $order_totals in C:\xampp\htdocs\sunstore-industries\checkout.php on line 33
+[05-Jul-2025 14:12:09 Europe/Berlin] Order Error: Database connection not established
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Warning:  Undefined variable $order_totals in C:\xampp\htdocs\sunstore-industries\checkout.php on line 175
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\sunstore-industries\checkout.php on line 175
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\xampp\htdocs\sunstore-industries\checkout.php on line 175
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Warning:  Undefined variable $order_totals in C:\xampp\htdocs\sunstore-industries\checkout.php on line 185
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\sunstore-industries\checkout.php on line 185
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\xampp\htdocs\sunstore-industries\checkout.php on line 185
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Warning:  Undefined variable $order_totals in C:\xampp\htdocs\sunstore-industries\checkout.php on line 190
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\sunstore-industries\checkout.php on line 190
+[05-Jul-2025 14:12:09 Europe/Berlin] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\xampp\htdocs\sunstore-industries\checkout.php on line 190
+[05-Jul-2025 14:12:25 Europe/Berlin] PHP Warning:  Undefined variable $order_totals in C:\xampp\htdocs\sunstore-industries\checkout.php on line 20
+[05-Jul-2025 14:12:25 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\sunstore-industries\checkout.php on line 20
+[05-Jul-2025 14:12:25 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 14:12:25 Europe/Berlin] Order Error: Database connection not established
+[05-Jul-2025 14:14:30 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 14:14:30 Europe/Berlin] Order Error: Database connection not established
+[05-Jul-2025 14:15:08 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 14:15:08 Europe/Berlin] Order Error: Database connection not established
+[05-Jul-2025 14:46:24 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 14:46:24 Europe/Berlin] Delivery calculation failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price' in 'field list'
+[05-Jul-2025 14:46:24 Europe/Berlin] Order Error: M-Pesa payment not initiated
+[05-Jul-2025 14:47:57 Europe/Berlin] Order Error: M-Pesa payment not initiated
+[05-Jul-2025 14:48:44 Europe/Berlin] Order Error: M-Pesa payment not initiated
+[05-Jul-2025 14:49:31 Europe/Berlin] Order Error: Database connection not established
+[05-Jul-2025 14:51:31 Europe/Berlin] Order Error: M-Pesa payment not initiated
+[05-Jul-2025 14:57:11 Europe/Berlin] Order Error: M-Pesa payment not initiated
+[05-Jul-2025 16:30:46 Europe/Berlin] PHP Warning:  Undefined array key "mpesa_amount" in C:\xampp\htdocs\sunstore-industries\checkout.php on line 232
+[05-Jul-2025 16:30:46 Europe/Berlin] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in C:\xampp\htdocs\sunstore-industries\checkout.php on line 232
+[05-Jul-2025 17:59:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function get_related_products() in C:\xampp\htdocs\sunstore-industries\product.php:63
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\product.php on line 63
+[05-Jul-2025 18:00:47 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function get_related_products() in C:\xampp\htdocs\sunstore-industries\product.php:63
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\product.php on line 63
+[05-Jul-2025 18:03:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\sunstore-industries\product.php:118
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\product.php(118): htmlspecialchars(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\product.php on line 118
+[05-Jul-2025 18:15:50 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\sunstore-industries\product.php:133
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\product.php(133): htmlspecialchars(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\product.php on line 133
+[05-Jul-2025 18:19:54 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\sunstore-industries\product.php:134
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\product.php(134): htmlspecialchars(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\product.php on line 134
+[05-Jul-2025 18:25:01 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\sunstore-industries\product.php:141
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\product.php(141): htmlspecialchars(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\product.php on line 141
+[05-Jul-2025 18:25:24 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\sunstore-industries\product.php:141
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\product.php(141): htmlspecialchars(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\product.php on line 141
+[05-Jul-2025 18:35:23 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\sunstore-industries\product.php:196
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\product.php(196): htmlspecialchars(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\product.php on line 196
+[05-Jul-2025 18:36:18 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: htmlspecialchars(): Argument #1 ($string) must be of type string, array given in C:\xampp\htdocs\sunstore-industries\product.php:196
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\product.php(196): htmlspecialchars(Array)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\product.php on line 196
+[05-Jul-2025 19:40:53 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\sunstore-industries\customers\customer_account.php on line 29
+[05-Jul-2025 19:40:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\sunstore-industries\customers\customer_account.php:29
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\customers\customer_account.php on line 29
+[05-Jul-2025 19:47:25 Europe/Berlin] PHP Warning:  require_once(includes/header.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\sunstore-industries\customers\customer_account.php on line 57
+[05-Jul-2025 19:47:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'includes/header.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\sunstore-industries\customers\customer_account.php:57
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\customers\customer_account.php on line 57
+[05-Jul-2025 19:49:31 Europe/Berlin] PHP Warning:  require_once(includes/header.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\sunstore-industries\customers\customer_account.php on line 58
+[05-Jul-2025 19:49:31 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'includes/header.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\sunstore-industries\customers\customer_account.php:58
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\customers\customer_account.php on line 58
+[05-Jul-2025 19:56:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\sunstore-industries\track_orders.php:29
+Stack trace:
+#0 C:\xampp\htdocs\sunstore-industries\track_orders.php(65): get_customer_orders(1)
+#1 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\track_orders.php on line 29
+[05-Jul-2025 21:07:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function get_brands_by_category() in C:\xampp\htdocs\sunstore-industries\category.php:123
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\category.php on line 123
+[05-Jul-2025 21:08:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function get_brands_by_category() in C:\xampp\htdocs\sunstore-industries\category.php:123
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\category.php on line 123
+[05-Jul-2025 21:08:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function get_brands_by_category() in C:\xampp\htdocs\sunstore-industries\category.php:123
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\category.php on line 123
+[05-Jul-2025 21:31:18 Europe/Berlin] Customer query error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause'
+[05-Jul-2025 21:36:16 Europe/Berlin] Database error in customer_account.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[05-Jul-2025 21:36:43 Europe/Berlin] Database error in customer_account.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'order_id' in 'field list'
+[05-Jul-2025 22:06:34 Europe/Berlin] Database error in customer_account.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.order_id' in 'field list'
+[05-Jul-2025 22:06:43 Europe/Berlin] Database error in customer_account.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'o.order_id' in 'field list'
+[05-Jul-2025 23:06:57 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 21
+[05-Jul-2025 23:06:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 21
+[05-Jul-2025 23:17:02 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 21
+[05-Jul-2025 23:17:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 21
+[05-Jul-2025 23:17:15 Europe/Berlin] PHP Warning:  Undefined variable $conn in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 21
+[05-Jul-2025 23:17:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 21
+[05-Jul-2025 23:21:53 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 424
+[05-Jul-2025 23:21:53 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 431
+[05-Jul-2025 23:21:53 Europe/Berlin] PHP Warning:  Undefined array key "state" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 436
+[05-Jul-2025 23:21:53 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 436
+[05-Jul-2025 23:21:53 Europe/Berlin] PHP Warning:  Undefined array key "zip_code" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 444
+[05-Jul-2025 23:21:53 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 444
+[05-Jul-2025 23:21:53 Europe/Berlin] PHP Warning:  Undefined array key "country" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 449
+[05-Jul-2025 23:21:53 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 449
+[05-Jul-2025 23:26:11 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 424
+[05-Jul-2025 23:26:11 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 431
+[05-Jul-2025 23:26:11 Europe/Berlin] PHP Warning:  Undefined array key "state" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 436
+[05-Jul-2025 23:26:11 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 436
+[05-Jul-2025 23:26:11 Europe/Berlin] PHP Warning:  Undefined array key "country" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:26:11 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:28:49 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 424
+[05-Jul-2025 23:28:49 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 431
+[05-Jul-2025 23:28:49 Europe/Berlin] PHP Warning:  Undefined array key "state" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 436
+[05-Jul-2025 23:28:49 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 436
+[05-Jul-2025 23:28:49 Europe/Berlin] PHP Warning:  Undefined array key "country" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:28:49 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:31:27 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 432
+[05-Jul-2025 23:31:27 Europe/Berlin] PHP Warning:  Undefined array key "state" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 437
+[05-Jul-2025 23:31:27 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 437
+[05-Jul-2025 23:31:27 Europe/Berlin] PHP Warning:  Undefined array key "country" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 451
+[05-Jul-2025 23:31:27 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 451
+[05-Jul-2025 23:31:51 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 431
+[05-Jul-2025 23:31:51 Europe/Berlin] PHP Warning:  Undefined array key "state" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 436
+[05-Jul-2025 23:31:51 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 436
+[05-Jul-2025 23:31:51 Europe/Berlin] PHP Warning:  Undefined array key "country" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:31:51 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:34:26 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 431
+[05-Jul-2025 23:34:26 Europe/Berlin] PHP Warning:  Undefined array key "country" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:34:26 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:35:38 Europe/Berlin] PHP Warning:  Undefined array key "country" in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:35:38 Europe/Berlin] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\sunstore-industries\customers\edit_profile.php on line 450
+[05-Jul-2025 23:41:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function get_brands_by_category() in C:\xampp\htdocs\sunstore-industries\category.php:123
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sunstore-industries\category.php on line 123
+[06-Jul-2025 00:08:52 Europe/Berlin] Executing query: SELECT 
+                    id, 
+                    title, 
+                    description, 
+                    category, 
+                    location, 
+                    status, 
+                    image, 
+                    video, 
+                    specs, 
+                    date_completed as date, 
+                    size,
+                    created_at
+                  FROM projects 
+                  ORDER BY created_at DESC
+[06-Jul-2025 00:08:52 Europe/Berlin] Retrieved 3 projects from database
