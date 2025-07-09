@@ -27,19 +27,19 @@ if (isset($_SESSION['customer_id'])) {  // Removed extra parenthesis here
 // Get delivery zones and rates from database
 try {
     $conn = db_connect();
-    
+
     // Get delivery zones
     $zones_stmt = $conn->query("SELECT * FROM delivery_zones ORDER BY zone_name");
     $delivery_zones = $zones_stmt->fetch_all(MYSQLI_ASSOC);
-    
+
     // Get delivery methods
     $methods_stmt = $conn->query("SELECT * FROM delivery_methods WHERE is_active = 1 ORDER BY delivery_time");
     $delivery_methods = $methods_stmt->fetch_all(MYSQLI_ASSOC);
-    
+
     // Get FAQs
     $faq_stmt = $conn->query("SELECT * FROM delivery_faqs ORDER BY display_order");
     $delivery_faqs = $faq_stmt->fetch_all(MYSQLI_ASSOC);
-    
+
 } catch (Exception $e) {
     error_log("Error loading delivery info: " . $e->getMessage());
     // Fallback data
@@ -48,13 +48,13 @@ try {
         ['zone_name' => 'Other Major Towns', 'delivery_time' => '2-3 business days', 'rate' => 800],
         ['zone_name' => 'Remote Areas', 'delivery_time' => '3-5 business days', 'rate' => 1200]
     ];
-    
+
     $delivery_methods = [
         ['method_name' => 'Standard Delivery', 'delivery_time' => '2-3 business days', 'rate' => 0, 'description' => 'Our most economical option'],
         ['method_name' => 'Express Delivery', 'delivery_time' => '1 business day', 'rate' => 500, 'description' => 'Priority handling for urgent orders'],
         ['method_name' => 'Installation Team Delivery', 'delivery_time' => 'Scheduled appointment', 'rate' => 1500, 'description' => 'Includes professional installation']
     ];
-    
+
     $delivery_faqs = [
         ['question' => 'How long does delivery take?', 'answer' => 'Typically 1-3 business days depending on your location.'],
         ['question' => 'Do you offer installation?', 'answer' => 'Yes, for solar systems we provide professional installation.'],
@@ -102,8 +102,8 @@ try {
                     </div>
                     <div class="alert alert-info mt-3">
                         <i class="bi bi-info-circle-fill me-2"></i>
-                        This information will be used as your default delivery location. 
-                        You can update it in <a href="account.php">your account settings</a> or 
+                        This information will be used as your default delivery location.
+                        You can update it in <a href="account.php">your account settings</a> or
                         change it during checkout.
                     </div>
                 </div>
@@ -116,7 +116,7 @@ try {
                     <h2 class="fw-bold mb-4">Delivery Information</h2>
                     <div class="alert alert-warning">
                         <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                        You're not logged in. <a href="login.php?redirect=delivery.php">Sign in</a> to see your saved delivery information 
+                        You're not logged in. <a href="customer_login.php?redirect=delivery.php">Sign in</a> to see your saved delivery information
                         or provide your details during checkout.
                     </div>
                 </div>
@@ -132,7 +132,7 @@ try {
                     <form action="track-order.php" method="GET" class="row g-3">
                         <div class="col-md-8">
                             <label for="tracking_number" class="form-label">Enter Tracking Number</label>
-                            <input type="text" class="form-control form-control-lg" id="tracking_number" 
+                            <input type="text" class="form-control form-control-lg" id="tracking_number"
                                    name="tracking_number" placeholder="e.g. SSI-123456" required>
                         </div>
                         <div class="col-md-4 d-flex align-items-end">
@@ -244,17 +244,17 @@ try {
                 <?php foreach ($delivery_faqs as $index => $faq): ?>
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="heading<?= $index ?>">
-                        <button class="accordion-button <?= $index > 0 ? 'collapsed' : '' ?>" 
-                                type="button" data-bs-toggle="collapse" 
-                                data-bs-target="#collapse<?= $index ?>" 
-                                aria-expanded="<?= $index === 0 ? 'true' : 'false' ?>" 
+                        <button class="accordion-button <?= $index > 0 ? 'collapsed' : '' ?>"
+                                type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse<?= $index ?>"
+                                aria-expanded="<?= $index === 0 ? 'true' : 'false' ?>"
                                 aria-controls="collapse<?= $index ?>">
                             <?= htmlspecialchars($faq['question']) ?>
                         </button>
                     </h3>
-                    <div id="collapse<?= $index ?>" 
-                         class="accordion-collapse collapse <?= $index === 0 ? 'show' : '' ?>" 
-                         aria-labelledby="heading<?= $index ?>" 
+                    <div id="collapse<?= $index ?>"
+                         class="accordion-collapse collapse <?= $index === 0 ? 'show' : '' ?>"
+                         aria-labelledby="heading<?= $index ?>"
                          data-bs-parent="#deliveryAccordion">
                         <div class="accordion-body">
                             <?= htmlspecialchars($faq['answer']) ?>
@@ -278,8 +278,8 @@ try {
                         <li class="list-group-item border-0">Delivery times may be affected by weather conditions or unforeseen circumstances.</li>
                     </ol>
                     <div class="alert alert-info mt-4">
-                        <strong>Need help?</strong> Contact our delivery team at 
-                        <a href="mailto:delivery@sunstoreindustries.com">delivery@sunstoreindustries.com</a> 
+                        <strong>Need help?</strong> Contact our delivery team at
+                        <a href="mailto:delivery@sunstoreindustries.com">delivery@sunstoreindustries.com</a>
                         or call <a href="tel:+254700123456">0700 123 456</a>
                     </div>
                 </div>

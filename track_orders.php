@@ -15,32 +15,32 @@ $customer_id = $_SESSION['customer_id'];
 
 // Function to get customer orders using PDO
 function get_customer_orders($customer_id, $pdo) {
-    $query = "SELECT o.*, 
+    $query = "SELECT o.*,
                      COUNT(oi.product_id) AS item_count
               FROM orders o
               LEFT JOIN order_items oi ON o.id = oi.order_id
               WHERE o.customer_id = :customer_id
               GROUP BY o.id
               ORDER BY o.created_at DESC";
-    
+
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':customer_id', $customer_id, PDO::PARAM_INT);
     $stmt->execute();
-    
+
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 // Function to get order items using PDO
 function get_order_items($order_id, $pdo) {
-    $query = "SELECT oi.product_id, oi.quantity, p.name, p.image, p.price 
+    $query = "SELECT oi.product_id, oi.quantity, p.name, p.image, p.price
               FROM order_items oi
               JOIN products p ON oi.product_id = p.id
               WHERE oi.order_id = :order_id";
-    
+
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':order_id', $order_id, PDO::PARAM_INT);
     $stmt->execute();
-    
+
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -70,14 +70,14 @@ require_once 'includes/header.php';
                             <?php unset($_SESSION['success']); ?>
                         </div>
                     <?php endif; ?>
-                    
+
                     <?php if (!empty($_SESSION['error'])): ?>
                         <div class="alert alert-danger">
                             <?= htmlspecialchars($_SESSION['error']) ?>
                             <?php unset($_SESSION['error']); ?>
                         </div>
                     <?php endif; ?>
-                    
+
                     <?php if (empty($orders)): ?>
                         <div class="alert alert-info">
                             You haven't placed any orders yet.
@@ -106,7 +106,7 @@ require_once 'includes/header.php';
                                             <td><?= $order['item_count'] ?></td>
                                             <td>Ksh <?= number_format($order['total'], 2) ?></td>
                                             <td>
-                                                <?php 
+                                                <?php
                                                 $status_class = '';
                                                 switch(strtolower($order['status'])) {
                                                     case 'pending':
@@ -134,7 +134,7 @@ require_once 'includes/header.php';
                                                 </span>
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-sm btn-outline-primary" 
+                                                <button type="button" class="btn btn-sm btn-outline-primary"
                                                         data-bs-toggle="modal" data-bs-target="#orderModal<?= $order['id'] ?>">
                                                     View Details
                                                 </button>
@@ -144,10 +144,10 @@ require_once 'includes/header.php';
                                 </tbody>
                             </table>
                         </div>
-                        
+
                         <!-- Order Detail Modals -->
                         <?php foreach ($orders as $order): ?>
-                            <?php 
+                            <?php
                             try {
                                 $order_items = get_order_items($order['id'], $pdo);
                                 $items_total = 0;
@@ -185,7 +185,7 @@ require_once 'includes/header.php';
                                                     <p><strong>Order Total:</strong> Ksh <?= number_format($order['total'], 2) ?></p>
                                                 </div>
                                             </div>
-                                            
+
                                             <h6>Order Items (<?= count($order_items) ?> items)</h6>
                                             <div class="table-responsive">
                                                 <table class="table table-sm">
@@ -203,7 +203,7 @@ require_once 'includes/header.php';
                                                                 <td>
                                                                     <div class="d-flex align-items-center">
                                                                         <?php if (!empty($item['image'])): ?>
-                                                                            <img src="/sunstore-industries/admin/assets/products/<?= htmlspecialchars($item['image']) ?>" 
+                                                                            <img src="/Sunstore-Project/admin/assets/products/<?= htmlspecialchars($item['image']) ?>"
                                                                                  class="img-thumbnail me-2" style="width: 50px; height: 50px; object-fit: cover;">
                                                                         <?php endif; ?>
                                                                         <div><?= htmlspecialchars($item['name']) ?></div>
@@ -227,7 +227,7 @@ require_once 'includes/header.php';
                                                     </tfoot>
                                                 </table>
                                             </div>
-                                            
+
                                             <div class="row mt-4">
                                                 <div class="col-md-6">
                                                     <h6>Customer Information</h6>
@@ -236,7 +236,7 @@ require_once 'includes/header.php';
                                                         <strong>Email:</strong> <?= htmlspecialchars($order['email']) ?><br>
                                                         <strong>Phone:</strong> <?= htmlspecialchars($order['phone']) ?><br>
                                                     </p>
-                                                    
+
                                                     <h6 class="mt-3">Shipping Address</h6>
                                                     <p>
                                                         <?= nl2br(htmlspecialchars($order['address'])) ?><br>

@@ -21,7 +21,7 @@
                 </li>
                 <?php foreach(get_blog_categories() as $category): ?>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <a href="blogs.php?category=<?= $category['slug'] ?>" 
+                        <a href="blogs.php?category=<?= $category['slug'] ?>"
                            class="text-decoration-none <?= (isset($_GET['category']) && $_GET['category'] == $category['slug']) ? 'fw-bold' : '' ?>">
                             <?= htmlspecialchars($category['name']) ?>
                         </a>
@@ -40,8 +40,8 @@
             <?php foreach(get_popular_blog_posts(3) as $post): ?>
                 <div class="mb-3 d-flex">
                     <div class="flex-shrink-0">
-                        <img src="/sunstore-industries/admin/assets/blog/<?= $post['featured_image'] ?>" 
-                             alt="<?= htmlspecialchars($post['title']) ?>" 
+                        <img src="/Sunstore-Project/admin/assets/blog/<?= $post['featured_image'] ?>"
+                             alt="<?= htmlspecialchars($post['title']) ?>"
                              class="rounded" width="60" height="60" style="object-fit: cover;">
                     </div>
                     <div class="flex-grow-1 ms-3">
@@ -67,7 +67,7 @@
         <div class="card-body">
             <div class="tag-cloud">
                 <?php foreach(get_popular_tags(15) as $tag): ?>
-                    <a href="blogs.php?search=<?= urlencode($tag['name']) ?>" 
+                    <a href="blogs.php?search=<?= urlencode($tag['name']) ?>"
                        class="btn btn-sm btn-outline-secondary me-2 mb-2">
                         <?= htmlspecialchars($tag['name']) ?>
                         <span class="badge bg-primary ms-1"><?= $tag['count'] ?></span>
@@ -99,7 +99,7 @@
             <h5 class="mb-0">Need Solar Solutions?</h5>
         </div>
         <div class="card-body text-center">
-            <img src="/sunstore-industries/assets/images/solar-expert.jpg" class="img-fluid rounded-circle mb-3" width="100" alt="Solar Expert">
+            <img src="/Sunstore-Project/assets/images/solar-expert.jpg" class="img-fluid rounded-circle mb-3" width="100" alt="Solar Expert">
             <h5>Talk to Our Experts</h5>
             <p class="small">Get free consultation for your solar needs</p>
             <a href="contact.php" class="btn btn-danger w-100">Contact Us</a>

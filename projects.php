@@ -30,7 +30,7 @@ try {
     <?php if (isset($error_message)): ?>
         <div class="alert alert-danger"><?= $error_message ?></div>
     <?php endif; ?>
-    
+
     <!-- Main Content -->
     <div class="row">
         <!-- Left Sidebar - Filters -->
@@ -51,7 +51,7 @@ try {
                     </ul>
                 </div>
             </div>
-            
+
             <!-- Project Locations -->
             <div class="card mb-4">
                 <div class="card-header bg-primary text-white">
@@ -68,7 +68,7 @@ try {
                     </ul>
                 </div>
             </div>
-            
+
             <!-- Project Status -->
             <div class="card mb-4">
                 <div class="card-header bg-primary text-white">
@@ -83,7 +83,7 @@ try {
                     </ul>
                 </div>
             </div>
-            
+
             <!-- Project Highlights -->
             <div class="card">
                 <div class="card-header bg-primary text-white">
@@ -120,7 +120,7 @@ try {
                 </div>
             </div>
         </div>
-        
+
         <!-- Main Projects Content -->
         <div class="col-md-9">
             <!-- Page Header -->
@@ -137,7 +137,7 @@ try {
                     </ul>
                 </div>
             </div>
-            
+
             <!-- Project Search -->
             <div class="input-group mb-4">
                 <input type="text" class="form-control" id="projectSearch" placeholder="Search projects...">
@@ -145,11 +145,11 @@ try {
                     <i class="fas fa-search"></i>
                 </button>
             </div>
-            
+
             <!-- Projects Grid -->
             <div class="row" id="projectsContainer">
                 <?php foreach($projects as $project): ?>
-                    <div class="col-md-6 mb-4 project-item" 
+                    <div class="col-md-6 mb-4 project-item"
                          data-category="<?= htmlspecialchars(strtolower($project['category'])) ?>"
                          data-location="<?= htmlspecialchars(strtolower($project['location'])) ?>"
                          data-status="<?= htmlspecialchars(strtolower($project['status'])) ?>"
@@ -157,12 +157,12 @@ try {
                          data-size="<?= $project['size'] ?>">
                         <div class="project-card h-100 shadow-sm rounded overflow-hidden position-relative">
                             <div class="project-image-container">
-                                <img src="/sunstore-industries/admin/assets/projects/<?= $project['image'] ?>" 
-                                     class="img-fluid" 
+                                <img src="/Sunstore-Project/admin/assets/projects/<?= $project['image'] ?>"
+                                     class="img-fluid"
                                      alt="<?= htmlspecialchars($project['title']) ?>"
                                      loading="lazy">
                             </div>
-                            
+
                             <div class="p-4">
                                 <h4><?= htmlspecialchars($project['title']) ?></h4>
                                 <div class="d-flex mb-3">
@@ -170,7 +170,7 @@ try {
                                     <span class="badge bg-secondary"><?= htmlspecialchars($project['category']) ?></span>
                                 </div>
                                 <p><?= htmlspecialchars($project['description']) ?></p>
-                                
+
                                 <div class="project-meta mb-3">
                                     <div class="row">
                                         <div class="col-6">
@@ -183,11 +183,11 @@ try {
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <ul class="project-specs list-unstyled mb-3">
-                                    <?php 
+                                    <?php
                                     $specs = (array)($project['specs'] ?? []);
-                                    foreach ($specs as $spec): 
+                                    foreach ($specs as $spec):
                                        if (is_string($spec)) {
                                           $display_spec = $spec;
                                        } elseif (is_array($spec)) {
@@ -199,7 +199,7 @@ try {
                                         <li><i class="fas fa-check-circle text-primary me-2"></i> <?= htmlspecialchars($display_spec) ?></li>
                                     <?php endforeach; ?>
                                 </ul>
-                                
+
                                 <?php if($project['video']): ?>
                                     <div class="text-end">
                                         <a href="#" class="btn btn-sm video-play-btn" data-bs-toggle="modal" data-bs-target="#projectVideoModal" data-video="<?= htmlspecialchars($project['video']) ?>">
@@ -207,10 +207,10 @@ try {
                                         </a>
                                     </div>
                                 <?php endif; ?>
-                                
+
                                 <a href="project-details.php?id=<?= $project['id'] ?>" class="btn btn-outline-primary w-100 mt-2">View Project Details</a>
                             </div>
-                            
+
                             <div class="project-badge position-absolute top-0 end-0 m-2">
                                 <span class="badge bg-<?= $project['status'] == 'Completed' ? 'success' : ($project['status'] == 'Ongoing' ? 'warning' : 'info') ?>">
                                     <?= htmlspecialchars($project['status']) ?>
@@ -220,7 +220,7 @@ try {
                     </div>
                 <?php endforeach; ?>
             </div>
-            
+
             <!-- Pagination -->
             <nav aria-label="Project pagination">
                 <ul class="pagination justify-content-center">

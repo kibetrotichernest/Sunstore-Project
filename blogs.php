@@ -34,7 +34,7 @@ $featured_posts = get_featured_blog_posts();
         <div class="col-md-3">
             <?php require_once 'includes/sidebar.php'; ?>
         </div>
-        
+
         <!-- Main Content Area -->
         <div class="col-md-9">
             <!-- Blog Header with Search -->
@@ -51,17 +51,17 @@ $featured_posts = get_featured_blog_posts();
                             </div>
                         </form>
                     </div>
-                    
+
                     <!-- Category Navigation -->
                     <div class="mb-4">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
                                 <a class="nav-link <?= !$category ? 'active' : '' ?>" href="blogs.php">All</a>
                             </li>
-                            <?php foreach($categories as $cat): ?>
+                            <?php foreach ($categories as $cat): ?>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= $category == $cat['slug'] ? 'active' : '' ?>" 
-                                       href="blogs.php?category=<?= $cat['slug'] ?>">
+                                    <a class="nav-link <?= $category == $cat['slug'] ? 'active' : '' ?>"
+                                        href="blogs.php?category=<?= $cat['slug'] ?>">
                                         <?= htmlspecialchars($cat['name']) ?>
                                     </a>
                                 </li>
@@ -70,23 +70,23 @@ $featured_posts = get_featured_blog_posts();
                     </div>
                 </div>
             </div>
-            
+
             <!-- Featured Posts (only show on first page when not searching/filtering) -->
-            <?php if($current_page == 1 && !$category && !$search): ?>
+            <?php if ($current_page == 1 && !$category && !$search): ?>
                 <div class="card mb-4">
                     <div class="card-header bg-primary text-white">
                         <h3 class="mb-0">Featured Articles</h3>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <?php foreach($featured_posts as $post): ?>
+                            <?php foreach ($featured_posts as $post): ?>
                                 <div class="col-md-4 mb-4">
                                     <div class="featured-post h-100">
                                         <div class="featured-post-image mb-3">
                                             <a href="blog-post.php?slug=<?= $post['slug'] ?>">
-                                                <img src="/sunstore-industries/admin/assets/blog/<?= $post['featured_image'] ?>" 
-                                                     alt="<?= htmlspecialchars($post['title']) ?>" 
-                                                     class="img-fluid rounded">
+                                                <img src="/Sunstore-Project/admin/assets/blog/<?= $post['featured_image'] ?>"
+                                                    alt="<?= htmlspecialchars($post['title']) ?>"
+                                                    class="img-fluid rounded">
                                             </a>
                                         </div>
                                         <div class="featured-post-content">
@@ -110,20 +110,20 @@ $featured_posts = get_featured_blog_posts();
                     </div>
                 </div>
             <?php endif; ?>
-            
+
             <!-- Blog Posts Listing -->
             <div class="card mb-4">
                 <div class="card-body">
-                    <?php if(!empty($blog_posts)): ?>
+                    <?php if (!empty($blog_posts)): ?>
                         <div class="row">
-                            <?php foreach($blog_posts as $post): ?>
+                            <?php foreach ($blog_posts as $post): ?>
                                 <div class="col-md-6 mb-4">
                                     <div class="blog-post-card h-100 shadow-sm">
                                         <div class="blog-post-image">
                                             <a href="blog-post.php?slug=<?= $post['slug'] ?>">
-                                                <img src="/sunstore-industries/admin/assets/blog/<?= $post['featured_image'] ?>" 
-                                                     alt="<?= htmlspecialchars($post['title']) ?>" 
-                                                     class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+                                                <img src="/Sunstore-Project/admin/assets/blog/<?= $post['featured_image'] ?>"
+                                                    alt="<?= htmlspecialchars($post['title']) ?>"
+                                                    class="img-fluid w-100" style="height: 200px; object-fit: cover;">
                                             </a>
                                         </div>
                                         <div class="p-4">
@@ -155,29 +155,29 @@ $featured_posts = get_featured_blog_posts();
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                        
+
                         <!-- Pagination -->
                         <nav aria-label="Blog pagination" class="mt-4">
                             <ul class="pagination justify-content-center">
-                                <?php if($current_page > 1): ?>
+                                <?php if ($current_page > 1): ?>
                                     <li class="page-item">
-                                        <a class="page-link" href="blogs.php?page=<?= $current_page-1 ?><?= $category ? '&category='.$category : '' ?><?= $search ? '&search='.urlencode($search) : '' ?>" aria-label="Previous">
+                                        <a class="page-link" href="blogs.php?page=<?= $current_page - 1 ?><?= $category ? '&category=' . $category : '' ?><?= $search ? '&search=' . urlencode($search) : '' ?>" aria-label="Previous">
                                             <span aria-hidden="true">&laquo;</span>
                                         </a>
                                     </li>
                                 <?php endif; ?>
-                                
-                                <?php for($i = 1; $i <= $total_pages; $i++): ?>
+
+                                <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                                     <li class="page-item <?= $i == $current_page ? 'active' : '' ?>">
-                                        <a class="page-link" href="blogs.php?page=<?= $i ?><?= $category ? '&category='.$category : '' ?><?= $search ? '&search='.urlencode($search) : '' ?>">
+                                        <a class="page-link" href="blogs.php?page=<?= $i ?><?= $category ? '&category=' . $category : '' ?><?= $search ? '&search=' . urlencode($search) : '' ?>">
                                             <?= $i ?>
                                         </a>
                                     </li>
                                 <?php endfor; ?>
-                                
-                                <?php if($current_page < $total_pages): ?>
+
+                                <?php if ($current_page < $total_pages): ?>
                                     <li class="page-item">
-                                        <a class="page-link" href="blogs.php?page=<?= $current_page+1 ?><?= $category ? '&category='.$category : '' ?><?= $search ? '&search='.urlencode($search) : '' ?>" aria-label="Next">
+                                        <a class="page-link" href="blogs.php?page=<?= $current_page + 1 ?><?= $category ? '&category=' . $category : '' ?><?= $search ? '&search=' . urlencode($search) : '' ?>" aria-label="Next">
                                             <span aria-hidden="true">&raquo;</span>
                                         </a>
                                     </li>
@@ -194,7 +194,7 @@ $featured_posts = get_featured_blog_posts();
                     <?php endif; ?>
                 </div>
             </div>
-            
+
             <!-- Newsletter Subscription -->
             <div class="card">
                 <div class="card-body bg-light">

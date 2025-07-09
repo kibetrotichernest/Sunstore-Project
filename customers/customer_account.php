@@ -10,7 +10,7 @@ require_once '../includes/functions.php';
 // Check if user is logged in
 if (!isset($_SESSION['customer_id'])) {
     $_SESSION['error'] = "Please login to access your account";
-    header("Location: login.php");
+    header("Location: ../customer_login.php");
     exit();
 }
 
@@ -22,10 +22,10 @@ $error = '';
 try {
     // Get customer ID from session
     $customer_id = (int)$_SESSION['customer_id'];
-    
+
     // Fetch customer details
     $stmt = $pdo->prepare("
-        SELECT 
+        SELECT
             customer_id,
             first_name,
             last_name,
@@ -35,7 +35,7 @@ try {
             city,
             county,
             created_at
-        FROM customers 
+        FROM customers
         WHERE customer_id = :customer_id
         LIMIT 1
     ");
@@ -48,7 +48,7 @@ try {
     } else {
         // Fetch recent orders (last 5) with proper table references
         $orders_stmt = $pdo->prepare("
-            SELECT 
+            SELECT
                 o.id AS order_id,
                 o.created_at,
                 o.total,
@@ -56,16 +56,15 @@ try {
                 COUNT(oi.item_id) AS item_count
             FROM orders o
             LEFT JOIN order_items oi ON o.id = oi.order_id
-            WHERE o.customer_id = :customer_id 
+            WHERE o.customer_id = :customer_id
             GROUP BY o.id
-            ORDER BY o.created_at DESC 
+            ORDER BY o.created_at DESC
             LIMIT 5
         ");
         $orders_stmt->bindParam(':customer_id', $customer_id, PDO::PARAM_INT);
         $orders_stmt->execute();
         $recent_orders = $orders_stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
 } catch (PDOException $e) {
     error_log("Database error in customer_account.php: " . $e->getMessage());
     $error = "We're experiencing technical difficulties. Please try again later.";
@@ -102,7 +101,7 @@ require_once '../includes/header.php';
                 </div>
             </div>
         </div>
-        
+
         <!-- Main Content -->
         <div class="col-lg-9">
             <?php if (!empty($_SESSION['success'])): ?>
@@ -112,14 +111,14 @@ require_once '../includes/header.php';
                     <?php unset($_SESSION['success']); ?>
                 </div>
             <?php endif; ?>
-            
+
             <?php if (!empty($error)): ?>
                 <div class="alert alert-danger alert-dismissible fade show">
                     <?= htmlspecialchars($error) ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             <?php endif; ?>
-            
+
             <?php if (!empty($customer)): ?>
                 <div class="card shadow-sm mb-4">
                     <div class="card-header bg-light">
@@ -148,7 +147,7 @@ require_once '../includes/header.php';
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-6">
                                 <div class="mb-4">
                                     <h6 class="text-muted mb-3">Address</h6>
@@ -171,7 +170,7 @@ require_once '../includes/header.php';
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="card shadow-sm">
                     <div class="card-header bg-light">
                         <h5 class="mb-0">Recent Orders</h5>
@@ -233,7 +232,7 @@ require_once '../includes/header.php';
                                 <i class="fas fa-box-open fa-3x text-muted mb-3"></i>
                                 <h5>No orders yet</h5>
                                 <p class="text-muted">You haven't placed any orders with us yet.</p>
-                                <a href="products.php" class="btn btn-primary">
+                                <a href="product.php?view=all" class="btn btn-primary">
                                     Start Shopping
                                 </a>
                             </div>

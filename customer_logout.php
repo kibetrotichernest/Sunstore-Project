@@ -9,16 +9,23 @@ $_SESSION = array();
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(
-        session_name(), 
-        '', 
+        session_name(),
+        '',
         time() - 42000,
-        $params["path"], 
+        $params["path"],
         $params["domain"],
-        $params["secure"], 
+        $params["secure"],
         $params["httponly"]
     );
 }
-
+// Explicitly unset customer session variables
+unset(
+    $_SESSION['customer_id'],
+    $_SESSION['first_name'],
+    $_SESSION['last_name'],
+    $_SESSION['email'],
+    $_SESSION['logged_in']
+);
 // Destroy the session
 session_destroy();
 
@@ -26,6 +33,5 @@ session_destroy();
 setcookie('remember_token', '', time() - 3600, "/");
 
 // Redirect to home page
-header("Location: /sunstore-industries/index.php");
+header("Location: /Sunstore-Project/index.php");
 exit();
-?>

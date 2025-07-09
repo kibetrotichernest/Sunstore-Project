@@ -3,7 +3,7 @@ session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['customer_id'])) {
-    header("Location: login.php");
+    header("Location: ../customer_login.php");
     exit();
 }
 
@@ -22,9 +22,9 @@ try {
     $stmt = $pdo->prepare("SELECT * FROM customers WHERE customer_id = :customer_id");
     $stmt->bindParam(':customer_id', $customer_id, PDO::PARAM_INT);
     $stmt->execute();
-    
+
     $customer = $stmt->fetch(PDO::FETCH_ASSOC);
-    
+
     if (!$customer) {
         $error = "Customer not found";
         header("Location: customer_account.php?error=" . urlencode($error));
@@ -58,17 +58,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
     // If no errors, update database
     if (empty($errors['profile'])) {
         try {
-            $stmt = $pdo->prepare("UPDATE customers SET 
-                                  first_name = :first_name, 
-                                  last_name = :last_name, 
-                                  phone = :phone, 
-                                  address = :address, 
-                                  city = :city, 
-                                  state = :state, 
-                                  zip_code = :zip_code, 
-                                  country = :country 
+            $stmt = $pdo->prepare("UPDATE customers SET
+                                  first_name = :first_name,
+                                  last_name = :last_name,
+                                  phone = :phone,
+                                  address = :address,
+                                  city = :city,
+                                  state = :state,
+                                  zip_code = :zip_code,
+                                  country = :country
                                   WHERE customer_id = :customer_id");
-            
+
             $stmt->execute([
                 ':first_name' => $first_name,
                 ':last_name' => $last_name,
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
                 ':country' => $country,
                 ':customer_id' => $customer_id
             ]);
-            
+
             if ($stmt->rowCount() > 0) {
                 $success['profile'] = "Profile updated successfully!";
                 // Refresh customer data
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['change_password'])) {
     $current_password = $_POST['current_password'] ?? '';
     $new_password = $_POST['new_password'] ?? '';
     $confirm_password = $_POST['confirm_password'] ?? '';
-    
+
     // Validate inputs
     if (empty($current_password)) {
         $errors['password'][] = "Current password is required";
@@ -126,16 +126,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['change_password'])) {
             $stmt->bindParam(':customer_id', $customer_id, PDO::PARAM_INT);
             $stmt->execute();
             $customer_data = $stmt->fetch(PDO::FETCH_ASSOC);
-            
+
             if (password_verify($current_password, $customer_data['password'])) {
                 // Hash new password
                 $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
-                
+
                 // Update password
                 $stmt = $pdo->prepare("UPDATE customers SET password = :password WHERE customer_id = :customer_id");
                 $stmt->bindParam(':password', $hashed_password);
                 $stmt->bindParam(':customer_id', $customer_id, PDO::PARAM_INT);
-                
+
                 if ($stmt->execute()) {
                     $success['password'] = "Password changed successfully!";
                     $active_tab = 'password';
@@ -176,38 +176,38 @@ function sanitize_input($data) {
             --border-color: #dee2e6;
             --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
-        
+
         body {
             background-color: #f5f5f5;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             line-height: 1.6;
         }
-        
+
         .account-settings-container {
             max-width: 1200px;
             margin: 2rem auto;
             padding: 0 15px;
         }
-        
+
         .account-header {
             margin-bottom: 2rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid var(--border-color);
         }
-        
+
         .account-header h1 {
             color: var(--primary-color);
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
-        
+
         .tabs {
             display: flex;
             border-bottom: 1px solid var(--border-color);
             margin-bottom: 2rem;
         }
-        
+
         .tab {
             padding: 0.75rem 1.5rem;
             cursor: pointer;
@@ -216,16 +216,16 @@ function sanitize_input($data) {
             border-bottom: 3px solid transparent;
             transition: all 0.3s ease;
         }
-        
+
         .tab:hover {
             color: var(--primary-color);
         }
-        
+
         .tab.active {
             color: var(--secondary-color);
             border-bottom-color: var(--secondary-color);
         }
-        
+
         .tab-content {
             display: none;
             background: white;
@@ -234,29 +234,29 @@ function sanitize_input($data) {
             padding: 2rem;
             margin-bottom: 2rem;
         }
-        
+
         .tab-content.active {
             display: block;
         }
-        
+
         .form-row {
             display: flex;
             gap: 1.5rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .form-group {
             flex: 1;
             margin-bottom: 1rem;
         }
-        
+
         label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
             color: var(--primary-color);
         }
-        
+
         input[type="text"],
         input[type="tel"],
         input[type="password"],
@@ -269,7 +269,7 @@ function sanitize_input($data) {
             font-size: 1rem;
             transition: border-color 0.3s ease;
         }
-        
+
         input:focus,
         textarea:focus,
         select:focus {
@@ -277,12 +277,12 @@ function sanitize_input($data) {
             border-color: var(--secondary-color);
             box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
         }
-        
+
         textarea {
             min-height: 100px;
             resize: vertical;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 0.75rem 1.5rem;
@@ -296,13 +296,13 @@ function sanitize_input($data) {
             transition: all 0.3s ease;
             text-decoration: none;
         }
-        
+
         .btn:hover {
             background-color: #2980b9;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         .error {
             color: var(--danger-color);
             background-color: #fadbd8;
@@ -311,7 +311,7 @@ function sanitize_input($data) {
             margin-bottom: 1.5rem;
             border-left: 4px solid var(--danger-color);
         }
-        
+
         .success {
             color: var(--success-color);
             background-color: #d5f5e3;
@@ -320,7 +320,7 @@ function sanitize_input($data) {
             margin-bottom: 1.5rem;
             border-left: 4px solid var(--success-color);
         }
-        
+
         .password-strength {
             height: 5px;
             background-color: var(--light-gray);
@@ -328,13 +328,13 @@ function sanitize_input($data) {
             margin-top: 0.5rem;
             overflow: hidden;
         }
-        
+
         .password-strength-bar {
             height: 100%;
             width: 0%;
             transition: width 0.3s ease, background-color 0.3s ease;
         }
-        
+
         .back-link {
             display: inline-block;
             margin-left: 1rem;
@@ -342,27 +342,27 @@ function sanitize_input($data) {
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .back-link:hover {
             color: var(--primary-color);
         }
-        
+
         @media (max-width: 768px) {
             .form-row {
                 flex-direction: column;
                 gap: 0;
             }
-            
+
             .tabs {
                 flex-direction: column;
                 border-bottom: none;
             }
-            
+
             .tab {
                 border-bottom: 1px solid var(--border-color);
                 border-left: 3px solid transparent;
             }
-            
+
             .tab.active {
                 border-left-color: var(--secondary-color);
                 border-bottom-color: var(--border-color);
@@ -376,14 +376,14 @@ function sanitize_input($data) {
             <h1>Account Settings</h1>
             <p>Manage your profile information and security settings</p>
         </div>
-        
+
         <div class="tabs">
-            <div class="tab <?php echo $active_tab === 'profile' ? 'active' : ''; ?>" 
+            <div class="tab <?php echo $active_tab === 'profile' ? 'active' : ''; ?>"
                  onclick="switchTab('profile')">Profile Information</div>
-            <div class="tab <?php echo $active_tab === 'password' ? 'active' : ''; ?>" 
+            <div class="tab <?php echo $active_tab === 'password' ? 'active' : ''; ?>"
                  onclick="switchTab('password')">Change Password</div>
         </div>
-        
+
         <!-- Profile Information Tab -->
         <div id="profile-tab" class="tab-content <?php echo $active_tab === 'profile' ? 'active' : ''; ?>">
             <?php if (!empty($errors['profile'])): ?>
@@ -393,71 +393,71 @@ function sanitize_input($data) {
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-            
+
             <?php if (!empty($success['profile'])): ?>
                 <div class="success"><?php echo htmlspecialchars($success['profile']); ?></div>
             <?php endif; ?>
-            
+
             <form method="post" action="?tab=profile">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="first_name">First Name*</label>
-                        <input type="text" id="first_name" name="first_name" 
+                        <input type="text" id="first_name" name="first_name"
                                value="<?php echo htmlspecialchars($customer['first_name']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="last_name">Last Name*</label>
-                        <input type="text" id="last_name" name="last_name" 
+                        <input type="text" id="last_name" name="last_name"
                                value="<?php echo htmlspecialchars($customer['last_name']); ?>" required>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" 
+                    <input type="tel" id="phone" name="phone"
                            value="<?php echo htmlspecialchars($customer['phone']); ?>"
                            placeholder="e.g., 123-456-7890">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="address">Address</label>
                     <textarea id="address" name="address"><?php echo htmlspecialchars($yourVariable ?? '', ENT_QUOTES, 'UTF-8'); ?></textarea>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="city">City</label>
-                        <input type="text" id="city" name="city" 
+                        <input type="text" id="city" name="city"
                                value="<?php echo htmlspecialchars($variable ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                     </div>
                     <div class="form-group">
                         <label for="state">State/Province</label>
-                        <input type="text" id="state" name="state" 
+                        <input type="text" id="state" name="state"
                                value="<?php echo htmlspecialchars($variable ?? ''); ?>">
                     </div>
                 </div>
-                
+
                 <div class="form-row">
                     <div class="form-group">
                         <label for="zip_code">ZIP/Postal Code</label>
-                        <input type="text" id="zip_code" name="zip_code" 
-                         value="<?php echo htmlspecialchars($customer['phone'] ?? ''); ?>" 
-                         placeholder="e.g., 123-456-7890">                 
+                        <input type="text" id="zip_code" name="zip_code"
+                         value="<?php echo htmlspecialchars($customer['phone'] ?? ''); ?>"
+                         placeholder="e.g., 123-456-7890">
                     </div>
                     <div class="form-group">
                         <label for="country">Country</label>
-                        <input type="text" id="country" name="country" 
+                        <input type="text" id="country" name="country"
                                value="<?php echo htmlspecialchars($variable ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <button type="submit" name="update_profile" class="btn">Update Profile</button>
                     <a href="customer_account.php" class="back-link">Back to Account</a>
                 </div>
             </form>
         </div>
-        
+
         <!-- Change Password Tab -->
         <div id="password-tab" class="tab-content <?php echo $active_tab === 'password' ? 'active' : ''; ?>">
             <?php if (!empty($errors['password'])): ?>
@@ -467,17 +467,17 @@ function sanitize_input($data) {
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-            
+
             <?php if (!empty($success['password'])): ?>
                 <div class="success"><?php echo htmlspecialchars($success['password']); ?></div>
             <?php endif; ?>
-            
+
             <form method="post" action="?tab=password">
                 <div class="form-group">
                     <label for="current_password">Current Password*</label>
                     <input type="password" id="current_password" name="current_password" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="new_password">New Password*</label>
                     <input type="password" id="new_password" name="new_password" required
@@ -487,12 +487,12 @@ function sanitize_input($data) {
                     </div>
                     <small>Password must be at least 8 characters long</small>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="confirm_password">Confirm New Password*</label>
                     <input type="password" id="confirm_password" name="confirm_password" required>
                 </div>
-                
+
                 <div class="form-group">
                     <button type="submit" name="change_password" class="btn">Change Password</button>
                     <a href="customer_account.php" class="back-link">Back to Account</a>
@@ -505,39 +505,39 @@ function sanitize_input($data) {
         function switchTab(tabName) {
             // Update URL without reloading
             history.pushState(null, null, `?tab=${tabName}`);
-            
+
             // Hide all tab contents
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
-            
+
             // Show selected tab content
             document.getElementById(`${tabName}-tab`).classList.add('active');
-            
+
             // Update active tab styling
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.classList.remove('active');
             });
             event.currentTarget.classList.add('active');
         }
-        
+
         function checkPasswordStrength(password) {
             const strengthBar = document.getElementById('password-strength-bar');
             let strength = 0;
-            
+
             // Length check
             if (password.length >= 8) strength += 20;
             if (password.length >= 12) strength += 20;
-            
+
             // Complexity checks
             if (password.match(/[a-z]/)) strength += 20;
             if (password.match(/[A-Z]/)) strength += 20;
             if (password.match(/[0-9]/)) strength += 10;
             if (password.match(/[^a-zA-Z0-9]/)) strength += 10;
-            
+
             // Update strength bar
             strengthBar.style.width = `${strength}%`;
-            
+
             // Update color
             if (strength < 40) {
                 strengthBar.style.background = 'var(--danger-color)';
